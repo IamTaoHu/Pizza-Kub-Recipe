@@ -1,0 +1,178 @@
+img{
+    width:100%;
+}
+h1, h2{
+    background-color:rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-family: Georgia, 'Times New Roman', Times, serif; 
+}
+
+a:link{
+	color: #FF0000; 
+} /* unvisited link */
+a:visited{
+	color: #0004ff; 
+} /* visited link */
+a:hover{ 
+	color: #ffee00; 
+} /* mouse over link */ 
+
+/* div flex */
+.flex_container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+}
+
+.flex_container > div{
+    border: 2px solid yellow;
+    width: 150px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+/* Animation */
+.move{
+    width: 15%;
+    animation: moveball 5s linear infinite;
+    position: relative;
+}
+
+@keyframes moveball {
+    0% { left: 30%; top:0% }
+    50% { left: 55%; top:0% }
+    100% { left: 30%; top:0% }
+  }
+.rotate{
+    width: 30%;
+    animation: spin 3s linear infinite;
+    padding: 10%;
+    margin: auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+/* Grid display */
+.grid-container{
+    display: grid;
+    grid-template-columns: 10% auto 20%;
+    grid-gap: 10px;
+}
+
+.grid-container > div{
+    border: 1px solid black;
+    font-size: 20px;
+    text-align: center;
+    background-color:rgb(252, 125, 125);
+}
+
+#header{
+    grid-column: 1 / span 3;
+}
+
+#menu{
+    grid-column: 1 / span 1;
+}
+
+#main{
+    grid-column: 2 / span 1;
+}
+#right{
+    grid-column: 3 / span 1;
+}
+
+#footer{
+    grid-column: 1 / span 3;
+}
+
+ @media only screen and (max-width: 500px){
+    body{
+        background-color: rgb(194, 230, 173);
+    }
+}
+
+
+@media only screen and (max-width: 767px){
+    .grid-container{
+        display: grid;
+        grid-template-columns: auto 20%;
+        grid-gap: 10%;
+    }
+    #header{
+        grid-column: 1 / span 2;
+    }
+    
+    #menu{
+        grid-column: 1 / span 2;
+        text-align: left;
+    }
+    
+    #menu div{
+        display: inline-block;
+    }
+
+    #main{
+        grid-column: 1 / span 1;
+    }
+    #right{
+        grid-column: 2 / span 1;
+    }
+    #footer{
+        grid-column: 1 / span 2;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .grid-container{
+        display: grid;
+        grid-template-columns: auto;
+        grid-gap: 10%;
+    }
+    #header{
+        grid-column: 1 / span 1;
+    }
+    
+    #menu{
+        grid-column: 1 / span 1;
+    }
+    
+    #main{
+        grid-column: 1 / span 1;
+    }
+    #right{
+        grid-column: 1 / span 1;
+    }
+    #footer{
+        grid-column: 1 / span 1;
+    }
+}
+
+.center{
+    text-align: center;
+}
+.left{
+    text-align: left;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.LEFTmenu{
+    text-align: left;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+#pizza_pic{
+    width: 25%;
+    border: 5px dotted rgb(0, 0, 0);
+    border-radius: 80px;
+    vertical-align: middle;
+}
+#img30{
+	width: 30%;
+}
+#img15{
+	width: 15%;
+}
